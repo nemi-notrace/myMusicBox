@@ -1,49 +1,40 @@
-(not the forwarding)
+## Create a Hotspot on Pi
 https://www.elektronik-kompendium.de/sites/raspberry-pi/2002171.htm
 
-(https://stackabuse.com/copying-a-directory-with-scp/)
-$ scp -r /path/to/local/source user@ssh.example.com:/path/to/remote/destination 
-
-
+## How to use scp
+https://stackabuse.com/copying-a-directory-with-scp/
+```scp -r /path/to/local/source user@ssh.example.com:/path/to/remote/destination``` 
 ----
+## Some requierments
+```
 sudo apt install vlc
 sudo apt install python3-pip
 pip3 install python-vlc
----
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 nvm install node
 nvm use node
 npm install -g pm2
 npm i -g corepack
-
+```
+## run the project with npm or yarn
 
 cd musicbox/frontend
-
+```
 npm install
-yarn install
-npm install fs-extra
-npm install @emotion/cache
-
 npm run build
-
+```
+---
+##Deploy the frontend
 https://desertbot.io/blog/nodejs-git-and-pm2-headless-raspberry-pi-install
 
- pm2 start npm --name index.js -- start
+```
+pm2 start npm --name index.js -- start
 pm2 save
 pm2 resurrect
 pm2 startup
-
-sudo env PATH=$PATH:/home/pi/.nvm/versions/node/v18.1.0/bin /home/pi/.nvm/versions/node/v18.1.0/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
-
 pm2 save
-
 sudo reboot
-
+```
 
 
 
