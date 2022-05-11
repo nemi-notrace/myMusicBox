@@ -1,6 +1,6 @@
-# Musikbox TN 46SK
+# Musikbox 
 
-Die Musikbox für TN46SK ist nicht als Phoniebox konzipiert da die gewünschte Bedienung nicht umsetzbar ist mit dem Konzept der Phoniebox.
+Die Musikbox für xxx ist nicht als Phoniebox konzipiert da die gewünschte Bedienung nicht umsetzbar ist mit dem Konzept der Phoniebox.
 
 Es wurde ein rudimentäres Skript geschrieben und als Service eingebunden welches die Buttons auf Ordner (0,1,2) mapped welche bei Aktivierung im VLC-Player als Playlist gestartet werden. Die Kontrolle der Lautstärke erfolgt über die System Lautstärke mittels ALSA.
 
@@ -10,4 +10,4 @@ Die gewünschte Musik muss in den Ordnern 0-2 abgelegt werden und darf keine Unt
 
 Um zugriff auf die Daten zu erhalten bzw. die Musik einzurichten kann der Pi mittels Tastatur und Monitor bedient werden, über  das anschließen eines LAN-Kabels via SSH oder durch das entnehmen der Speicherkarte und auslesen an einem anderen Gerät, wichtig hierbei ist das dieses mit dem Dateisystemen EXT2 und EXT4 umgehen können muss (Linux).
 
-Das Passwort ist wie gehabt teilhabe21
+Das Passwort ist wie gehabt xxx
